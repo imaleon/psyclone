@@ -1,0 +1,26 @@
+services:
+  # Web Service (Frontend)
+  - type: web
+    name: telegram-clone-frontend
+    env: static
+    buildCommand: "echo 'No build needed for static files'"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://telegram-clone-backend.onrender.com/api/*
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+  # API Service (Backend)
+  - type: web
+    name: telegram-clone-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000

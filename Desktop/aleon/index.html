@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="https://picsum.photos/seed/user1/40/40.jpg" alt="User Avatar">
+                    </div>
+                    <div class="user-details">
+                        <h3>Your Name</h3>
+                        <p>Online</p>
+                    </div>
+                </div>
+                <div class="sidebar-actions">
+                    <button class="icon-btn"><i class="fas fa-edit"></i></button>
+                    <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search or start new chat">
+                </div>
+            </div>
+            
+            <div class="chat-list">
+                <div class="chat-item active" data-chat-id="1">
+                    <div class="chat-avatar">
+                        <img src="https://picsum.photos/seed/chat1/50/50.jpg" alt="Chat Avatar">
+                        <span class="status online"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Alice Johnson</h4>
+                            <span class="time">2:30 PM</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Hey! How are you doing?</p>
+                            <span class="unread">2</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-item" data-chat-id="2">
+                    <div class="chat-avatar">
+                        <img src="https://picsum.photos/seed/chat2/50/50.jpg" alt="Chat Avatar">
+                        <span class="status offline"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Bob Smith</h4>
+                            <span class="time">1:15 PM</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>See you tomorrow!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-item" data-chat-id="3">
+                    <div class="chat-avatar">
+                        <img src="https://picsum.photos/seed/chat3/50/50.jpg" alt="Chat Avatar">
+                        <span class="status online"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Group Chat</h4>
+                            <span class="time">12:45 PM</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>John: Meeting at 3pm</p>
+                            <span class="unread">5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-item" data-chat-id="4">
+                    <div class="chat-avatar">
+                        <img src="https://picsum.photos/seed/chat4/50/50.jpg" alt="Chat Avatar">
+                        <span class="status away"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-header">
+                            <h4>Emma Wilson</h4>
+                            <span class="time">Yesterday</span>
+                        </div>
+                        <div class="chat-preview">
+                            <p>Thanks for the help!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Chat Area -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="header-avatar">
+                        <img src="https://picsum.photos/seed/chat1/40/40.jpg" alt="Chat Avatar">
+                        <span class="status online"></span>
+                    </div>
+                    <div class="header-details">
+                        <h3>Alice Johnson</h3>
+                        <p>Last seen 2:30 PM</p>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="icon-btn"><i class="fas fa-phone"></i></button>
+                    <button class="icon-btn"><i class="fas fa-video"></i></button>
+                    <button class="icon-btn"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+            
+            <div class="messages-container">
+                <div class="message received">
+                    <div class="message-avatar">
+                        <img src="https://picsum.photos/seed/chat1/30/30.jpg" alt="Avatar">
+                    </div>
+                    <div class="message-content">
+                        <p>Hey! How are you doing?</p>
+                        <span class="message-time">2:30 PM</span>
+                    </div>
+                </div>
+                
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>I'm doing great! Just working on some projects. How about you?</p>
+                        <span class="message-time">2:32 PM</span>
+                    </div>
+                </div>
+                
+                <div class="message received">
+                    <div class="message-avatar">
+                        <img src="https://picsum.photos/seed/chat1/30/30.jpg" alt="Avatar">
+                    </div>
+                    <div class="message-content">
+                        <p>That's awesome! I'm just catching up on some reading.</p>
+                        <span class="message-time">2:35 PM</span>
+                    </div>
+                </div>
+                
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>Sounds relaxing! Anything interesting?</p>
+                        <span class="message-time">2:36 PM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-input-container">
+                <div class="input-actions">
+                    <button class="icon-btn"><i class="fas fa-paperclip"></i></button>
+                    <button class="icon-btn"><i class="fas fa-image"></i></button>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="messageInput" placeholder="Type a message...">
+                    <button class="icon-btn emoji-btn"><i class="fas fa-smile"></i></button>
+                </div>
+                <button class="send-btn" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
