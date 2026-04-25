@@ -1,6 +1,6 @@
 const CONFIG = {
     // Update this with your Render URL: https://your-app-name.onrender.com
-    RENDER_URL: '',
+    RENDER_URL: 'psyclone.onrender.com',
     
     get API_URL() {
         return window.location.hostname === 'localhost' 
